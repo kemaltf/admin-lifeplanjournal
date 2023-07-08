@@ -3,7 +3,9 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 export default function Home() {
   const { data: session } = useSession();
-  if (!session) return;
+  if (!session) {
+    return <Layout>tes</Layout>;
+  }
   return (
     <Layout>
       <div className="text-blue-900 flex justify-between">
