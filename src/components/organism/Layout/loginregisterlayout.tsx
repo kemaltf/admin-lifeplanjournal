@@ -1,0 +1,22 @@
+import React from "react";
+import styles from "../../../styles/Loginregisterlayout.module.css";
+type Props = {};
+
+const LoginRegisterLayout = ({ children }: Props) => {
+  return (
+    <>
+      <div className="flex h-screen bg-blue-400">
+        <div className="m-auto bg-slate-50 rounded-md w-3/5  grid lg:grid-cols-2">
+          <div className={styles.imgStyle}>
+            <div className={styles.backgroundImg}></div>
+          </div>
+          <div className="right flex flex-col justify-evenly ">
+            <div className="text-center py-10">{children}</div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default LoginRegisterLayout;
