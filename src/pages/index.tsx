@@ -1,12 +1,32 @@
 import AdminLayout from "@/components/organism/Layout/adminlayout";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  const { data: session } = useSession();
-  if (!session) {
-    return <AdminLayout>tes</AdminLayout>;
-  }
+  // const { data: session } = useSession();
+  // if (!session) {
+  //   return <AdminLayout>tes</AdminLayout>;
+  // }
+  return <>{Guest()}</>;
+}
+//Guest
+function Guest() {
+  return (
+    <main className="contaienr mx-auto text-center py-20">
+      <h3 className="text-4xl font-bold">Guest Homepage</h3>
+
+      <div className="flex justify-center">
+        <Link href={"/login"} className="mt-5 px-10 py-1 rounded-sm bg-indigo-500 text-gray-100">
+          Sign In
+        </Link>
+      </div>
+    </main>
+  );
+}
+
+//athorized
+function Authorized() {
   return (
     <AdminLayout>
       <div className="text-blue-900 flex justify-between">
