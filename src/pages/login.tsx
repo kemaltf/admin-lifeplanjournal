@@ -3,9 +3,14 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Form.module.css";
 import Image from "next/image";
+import { FaFingerprint } from "react-icons/fa";
+import { HiAtSymbol } from "react-icons/hi";
+import { useState } from "react";
 type Props = {};
 
 const Login = (props: Props) => {
+  const [show, setShow] = useState(false);
+
   return (
     <LoginRegisterLayout>
       <Head>
@@ -19,9 +24,15 @@ const Login = (props: Props) => {
         <form className="flex flex-col gap-5">
           <div className={styles.input_group}>
             <input type="email" name="email" placeholder="email" className={styles.input_text}></input>
+            <span className="icon flex items-center px-4">
+              <HiAtSymbol size={25}></HiAtSymbol>
+            </span>
           </div>
           <div className={styles.input_group}>
-            <input type="password" name="password" placeholder="password" className={styles.input_text}></input>
+            <input type={`${show ? "text" : "password"}`} name="password" placeholder="password" className={styles.input_text}></input>
+            <span className="icon flex items-center px-4" onClick={() => setShow(!show)}>
+              <FaFingerprint size={25}></FaFingerprint>
+            </span>
           </div>
           <div className="input-button">
             <button type="submit" className={styles.button}>
