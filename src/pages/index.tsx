@@ -1,13 +1,14 @@
-import Layout from "@/components/organism/Layout";
-import { useSession } from "next-auth/react";
+import AdminLayout from "@/components/organism/Layout/adminlayout";
+import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
+
 export default function Home() {
   const { data: session } = useSession();
   if (!session) {
-    return <Layout>tes</Layout>;
+    return <AdminLayout>tes</AdminLayout>;
   }
   return (
-    <Layout>
+    <AdminLayout>
       <div className="text-blue-900 flex justify-between">
         <h2>
           Hello, <b>{session!.user!.name}</b>
@@ -19,6 +20,6 @@ export default function Home() {
           <span className="px-2">{session?.user?.name}</span>
         </div>
       </div>
-    </Layout>
+    </AdminLayout>
   );
 }

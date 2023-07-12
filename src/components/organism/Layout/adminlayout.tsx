@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 interface Props {
   children: ReactNode;
 }
-export default function Layout({ children }: Props) {
+export default function AdminLayout({ children }: Props) {
   const { data: session } = useSession();
   if (!session) {
     return (

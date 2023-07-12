@@ -1,4 +1,4 @@
-import Layout from "@/components/organism/Layout";
+import Layout from "@/components/organism/Layout/adminlayout";
 import Link from "next/link";
 import React from "react";
 

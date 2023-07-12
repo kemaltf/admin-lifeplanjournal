@@ -1,4 +1,4 @@
-import Layout from "@/components/organism/Layout";
+import Layout from "@/components/organism/Layout/adminlayout";
 import axios from "axios";
 import React, { useState } from "react";
 
