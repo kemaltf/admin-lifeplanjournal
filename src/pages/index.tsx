@@ -4,8 +4,11 @@ import Link from "next/link";
 import { getSession, useSession, signIn, signOut } from "next-auth/react";
 
 export default function Home() {
+  function handleSignOut() {
+    signOut();
+  }
   const { data: session } = useSession();
-  return <>{session ? Admin({ session }) : Guest()}</>;
+  return <>{session ? Admin({ session, handleSignOut }) : Guest()}</>;
 }
 //Guest
 function Guest() {
@@ -23,13 +26,14 @@ function Guest() {
 }
 
 //athorized
-function Admin({ session }) {
+function Admin({ session, handleSignOut }) {
   return (
     <AdminLayout>
       <div className="text-blue-900 flex justify-between">
         <h2>
           Hello, <b>{session!.user!.name}</b>
         </h2>
+        <button onClick={handleSignOut}>Sign Out</button>
         <div className="flex bg-gray-300 gap-1 text-black rounded-lg overflow-hidden">
           <div className="w-6 h-6 relative">
             <Image src={session!.user!.image!} alt="profile" fill style={{ objectFit: "cover" }}></Image>
