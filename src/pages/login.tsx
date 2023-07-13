@@ -6,11 +6,16 @@ import Image from "next/image";
 import { FaFingerprint } from "react-icons/fa";
 import { HiAtSymbol } from "react-icons/hi";
 import { useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
+
 type Props = {};
 
 const Login = (props: Props) => {
   const [show, setShow] = useState(false);
-
+  // Google Handler Function
+  async function handleGoogleSignin() {
+    signIn("google", { callbackUrl: "http://localhost:3000" });
+  }
   return (
     <LoginRegisterLayout>
       <Head>
@@ -40,7 +45,7 @@ const Login = (props: Props) => {
             </button>
           </div>
           <div className="input-button">
-            <button type="button" className={styles.button_custom}>
+            <button type="button" className={styles.button_custom} onClick={handleGoogleSignin}>
               Sign In with Google <Image alt="Google Login" src={"/assets/google.svg"} width={25} height={25}></Image>
             </button>
           </div>

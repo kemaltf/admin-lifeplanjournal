@@ -1,14 +1,11 @@
 import AdminLayout from "@/components/organism/Layout/adminlayout";
-import { useSession, signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { getSession, useSession, signIn, signOut } from "next-auth/react";
 
 export default function Home() {
-  // const { data: session } = useSession();
-  // if (!session) {
-  //   return <AdminLayout>tes</AdminLayout>;
-  // }
-  return <>{Guest()}</>;
+  const { data: session } = useSession();
+  return <>{session ? Admin({ session }) : Guest()}</>;
 }
 //Guest
 function Guest() {
@@ -26,7 +23,7 @@ function Guest() {
 }
 
 //athorized
-function Authorized() {
+function Admin({ session }) {
   return (
     <AdminLayout>
       <div className="text-blue-900 flex justify-between">
@@ -42,4 +39,20 @@ function Authorized() {
       </div>
     </AdminLayout>
   );
+}
+
+export async function getServerSideProps({ req }) {
+  const session = await getSession({ req });
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+  return {
+    props: { session },
+  };
 }
