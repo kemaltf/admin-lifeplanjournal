@@ -9,13 +9,15 @@ import { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useFormik } from "formik";
 import { loginValidate } from "@/lib/validate";
+import { useRouter } from "next/router";
 type Props = {};
 
 const Login = (props: Props) => {
   const [show, setShow] = useState(false);
+  const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      email: "",
+      username: "",
       password: "",
     },
     validate: loginValidate,
@@ -23,7 +25,15 @@ const Login = (props: Props) => {
   });
 
   async function onSubmit(values) {
-    console.log(values);
+    console.log("yes");
+    const status = await signIn("credentials", {
+      redirect: false,
+      username: values.username,
+      password: values.password,
+      callbackUrl: "/",
+    });
+    console.log(status);
+    if (status.ok) router.push(status.url);
   }
   // Google Handler Function
   async function handleGoogleSignin() {
@@ -41,7 +51,7 @@ const Login = (props: Props) => {
         </div>
         <form className="flex flex-col gap-5" onSubmit={formik.handleSubmit}>
           <div className={styles.input_group}>
-            <input type="email" placeholder="email" className={`${styles.input_text} ${formik.errors.email && formik.touched.email ? "border-rose-600" : ""}`} {...formik.getFieldProps("email")}></input>
+            <input type="text" placeholder="username" className={`${styles.input_text} ${formik.errors.username && formik.touched.username ? "border-rose-600" : ""}`} {...formik.getFieldProps("username")}></input>
             <span className="icon flex items-center px-4">
               <HiAtSymbol size={25}></HiAtSymbol>
             </span>

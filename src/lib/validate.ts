@@ -2,12 +2,17 @@ export function loginValidate(values) {
   const errors = {};
 
   // email validation
-  if (!values.email) {
-    errors.email = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = "Invalid email address";
+  // if (!values.email) {
+  //   errors.email = "Required";
+  // } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+  //   errors.email = "Invalid email address";
+  // }
+  // username validation
+  if (!values.username) {
+    errors.username = "Required";
+  } else if (values.username.includes(" ")) {
+    errors.username = "Invalid Username";
   }
-
   // validation for pass
   if (!values.password) {
     errors.password = "Required";
@@ -49,6 +54,21 @@ export function registerValidate(values) {
     errors.email = "Required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Invalid email address";
+  }
+
+  // phonenumber validation
+  // Hapus spasi, tanda +, dan tanda - dari nomor telepon
+  const cleanedPhoneNumber = values.phonenumber.replace(/\s|\+|-/g, "");
+  if (!cleanedPhoneNumber) {
+    errors.phonenumber = "Required";
+  }
+  // Cek apakah nomor telepon hanya terdiri dari angka
+  else if (!/^\d+$/.test(cleanedPhoneNumber)) {
+    errors.phonenumber = "Must be numbers";
+  }
+  // Cek panjang nomor telepon (misalnya, nomor telepon harus terdiri dari 10 atau 11 digit)
+  else if (cleanedPhoneNumber.length < 10 || cleanedPhoneNumber.length > 13) {
+    errors.phonenumber = "Phone number must more than 10 and under 13";
   }
 
   // validation for pass

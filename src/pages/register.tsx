@@ -9,7 +9,9 @@ import { HiAtSymbol } from "react-icons/hi";
 import { useState } from "react";
 import { useFormik } from "formik";
 import { registerValidate } from "@/lib/validate";
+import { useRouter } from "next/router";
 const Register = (props: Props) => {
+  const router = useRouter();
   const [show, setShow] = useState({ password: false, cpassword: false });
   const formik = useFormik({
     initialValues: {
@@ -19,13 +21,36 @@ const Register = (props: Props) => {
       email: "",
       password: "",
       cpassword: "",
+      phonenumber: "",
+      role_id: "",
     },
     validate: registerValidate,
     onSubmit: onSubmit,
   });
-  console.log(formik.errors);
+
   async function onSubmit(values) {
-    console.log(values);
+    const { username, firstname, lastname, email, password } = values;
+    const registerObject = {
+      username: username,
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      password: password,
+      phonenumber: "08929102",
+      role_id: "clk4daf850000er1gh6noc03o",
+    };
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(registerObject),
+    };
+    console.log(options);
+    await fetch("http://localhost:3000/api/auth/signup", options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // if (data) router.push("http://localhost:3000");
+      });
   }
   return (
     <LoginRegisterLayout>
@@ -77,6 +102,18 @@ const Register = (props: Props) => {
             ></input>
             <span className="icon flex items-center px-4" onClick={() => setShow({ ...show, cpassword: !show.cpassword })}>
               <FaFingerprint size={25}></FaFingerprint>
+            </span>
+          </div>
+          <div className={styles.input_group}>
+            <input type="text" placeholder="phonenumber" className={`${styles.input_text} ${formik.errors.phonenumber && formik.touched.phonenumber ? "border-rose-600" : ""}`} {...formik.getFieldProps("phonenumber")}></input>
+            <span className="icon flex items-center px-4">
+              <FaUser size={25}></FaUser>
+            </span>
+          </div>
+          <div className={styles.input_group}>
+            <input type="text" placeholder="role" className={`${styles.input_text} ${formik.errors.role_id && formik.touched.role_id ? "border-rose-600" : ""}`} {...formik.getFieldProps("role_id")}></input>
+            <span className="icon flex items-center px-4">
+              <FaUser size={25}></FaUser>
             </span>
           </div>
           <div className="input-button">
