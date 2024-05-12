@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-12T18:25:30.831Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="WJ0khmdtTcvUH6djtWt2" version="24.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-12T18:26:00.605Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Xp2-sT-8czImHVgRqe8h" version="24.4.0" type="github">
   <diagram name="Page-1" id="dRWybmV3dHy2gd9-pMt5">
     <mxGraphModel dx="1776" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -426,7 +426,7 @@
         <mxCell id="CjIFje3WWyRd5mg1TMor-92" value="service" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="740" y="1360" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="CjIFje3WWyRd5mg1TMor-94" value="change note:&lt;div&gt;1. Lib hapus, diganti server&lt;/div&gt;&lt;div&gt;2. Provider hapus langsung aja di dalam component&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="CjIFje3WWyRd5mg1TMor-94" value="change note:&lt;div&gt;1. Lib hapus, diganti server&lt;/div&gt;&lt;div&gt;2. Provider hapus langsung aja di dalam component&lt;/div&gt;&lt;div&gt;3. tidak ada hook local lagi, jadinya dipusatkan di 1 folder&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="800" y="990" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-95" value="utils" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
