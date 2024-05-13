@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-13T12:30:41.211Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="lYKJ-zd87NHZgmdIZ9tK" version="24.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-13T12:45:39.483Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="BjCTiiz5nHKNWNSY1ZpM" version="24.4.0" type="github">
   <diagram name="Page-1" id="dRWybmV3dHy2gd9-pMt5">
     <mxGraphModel dx="1730" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -440,17 +440,20 @@
         <mxCell id="m59lV6nP3Qb_ViOThWZN-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjIFje3WWyRd5mg1TMor-92" target="m59lV6nP3Qb_ViOThWZN-25">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjIFje3WWyRd5mg1TMor-92" target="m59lV6nP3Qb_ViOThWZN-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-92" value="service" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="740" y="1360" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-94" value="change note:&lt;div&gt;1. Lib hapus, diganti server&lt;/div&gt;&lt;div&gt;2. Provider hapus langsung aja di dalam component&lt;/div&gt;&lt;div&gt;3. tidak ada hook local lagi, jadinya dipusatkan di 1 folder&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="800" y="990" width="190" height="30" as="geometry" />
+          <mxGeometry x="910" y="950" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m59lV6nP3Qb_ViOThWZN-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjIFje3WWyRd5mg1TMor-95" target="m59lV6nP3Qb_ViOThWZN-27">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-95" value="utils" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="740" y="1410" width="60" height="30" as="geometry" />
+          <mxGeometry x="740" y="1470" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-99" value="images" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="740" y="960" width="60" height="30" as="geometry" />
@@ -511,10 +514,19 @@
           <mxGeometry x="825" y="1310" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m59lV6nP3Qb_ViOThWZN-25" value="[api name]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="825" y="1360" width="60" height="30" as="geometry" />
+          <mxGeometry x="845" y="1360" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="m59lV6nP3Qb_ViOThWZN-27" value="[api name]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="825" y="1410" width="60" height="30" as="geometry" />
+          <mxGeometry x="825" y="1470" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="m59lV6nP3Qb_ViOThWZN-29" target="m59lV6nP3Qb_ViOThWZN-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-29" value="db" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="845" y="1410" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-32" value="table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1410" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
