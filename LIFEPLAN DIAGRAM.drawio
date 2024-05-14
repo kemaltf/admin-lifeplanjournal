@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-13T12:45:39.483Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="BjCTiiz5nHKNWNSY1ZpM" version="24.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-14T15:33:47.548Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="YPEDd_2TaPiS2La2OFmo" version="24.4.0" type="github">
   <diagram name="Page-1" id="dRWybmV3dHy2gd9-pMt5">
-    <mxGraphModel dx="1730" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3783" dy="1560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -404,6 +404,9 @@
         <mxCell id="CjIFje3WWyRd5mg1TMor-77" value="state" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="760" y="1210" width="70" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="CjIFje3WWyRd5mg1TMor-79" target="m59lV6nP3Qb_ViOThWZN-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-79" value="forms" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="760" y="1260" width="70" height="30" as="geometry" />
         </mxCell>
@@ -417,7 +420,7 @@
           <mxGeometry x="860" y="1210" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-87" value="berkaitan dengan forms constant" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="845" y="1260" width="170" height="30" as="geometry" />
+          <mxGeometry x="980" y="1260" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="CjIFje3WWyRd5mg1TMor-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="CjIFje3WWyRd5mg1TMor-88" target="CjIFje3WWyRd5mg1TMor-90" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -527,6 +530,9 @@
         </mxCell>
         <mxCell id="m59lV6nP3Qb_ViOThWZN-32" value="table" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="930" y="1410" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m59lV6nP3Qb_ViOThWZN-35" value="[nama organisms]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="1260" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
